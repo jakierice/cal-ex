@@ -1,0 +1,30 @@
+{
+  "name": "cal-ex",
+  "version": "0.1.0",
+  "description": "Work calendar parsing and upload app",
+  "main": "main.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "clean": "rimraf dist",
+    "prebuild": "npm run lint && npm run clean",
+    "build": "webpack",
+    "prestart": "npm run build",
+    "start": "sam local start-api"
+  },
+  "author": "Jakie W. Rice",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "12.0.12",
+    "rimraf": "2.6.3",
+    "ts-loader": "6.0.4",
+    "tslint": "5.18.0",
+    "typescript": "3.5.2",
+    "webpack": "4.35.2",
+    "webpack-cli": "3.3.5"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "8.10.27",
+    "aws-lambda": "1.0.5",
+    "fp-ts": "1.19.4"
+  }
+}
