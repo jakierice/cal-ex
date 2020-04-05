@@ -51,7 +51,7 @@ outputs:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
+package:
  include:
    - dist/main.js
  exclude:
@@ -66,7 +66,7 @@ functions:
           path: posts
           method: get
           cors: true
-  listPosts:
+  createPost:
     handler: handler.createPostHandler
     events:
       - http:
