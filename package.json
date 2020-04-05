@@ -2,12 +2,13 @@
   "name": "cal-ex",
   "version": "0.1.0",
   "description": "Work calendar parsing and upload app",
-  "main": "main.js",
+  "main": "handler.js",
   "scripts": {
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "clean": "rimraf dist",
+    "dev": "serverless offline",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
     "prebuild": "npm run lint && npm run clean",
-    "build": "webpack",
     "prestart": "npm run build",
     "start": "sam local start-api"
   },
@@ -16,6 +17,8 @@
   "devDependencies": {
     "@types/node": "12.0.12",
     "rimraf": "2.6.3",
+    "serverless-offline": "^6.1.4",
+    "serverless-plugin-typescript": "^1.1.9",
     "ts-loader": "6.0.4",
     "tslint": "5.18.0",
     "typescript": "3.5.2",

@@ -15,6 +15,10 @@ service: bsw-calendar-parser
 app: cal-ex
 org: jakierice
 
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
@@ -25,7 +29,6 @@ provider:
 
 outputs:
   custom-output: any-value-here
-
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
@@ -51,12 +54,12 @@ outputs:
 #    variable1: value1
 
 # you can add packaging information here
-package:
- include:
-   - dist/main.js
- exclude:
-   - .git/**
-   - src/**
+# package:
+#  include:
+#    - dist/main.js
+#  exclude:
+#    - .git/**
+#    - src/**
 
 functions:
   listPosts:

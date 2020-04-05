@@ -1,6 +1,6 @@
-import { DB } from "./store";
+import { DB } from "./src/store";
 import { APIGatewayEvent } from "aws-lambda";
-import { listPosts, createPost } from "./service";
+import { listPosts, createPost } from "./src/service";
 
 const db = DB.inMemory();
 
