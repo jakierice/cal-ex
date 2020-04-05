@@ -4,18 +4,19 @@
   "description": "Work calendar parsing and upload app",
   "main": "handler.js",
   "scripts": {
-    "lint": "tslint -p tsconfig.json -c tslint.json",
     "clean": "rimraf dist",
     "dev": "serverless offline",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "prebuild": "npm run lint && npm run clean",
     "prestart": "npm run build",
-    "start": "sam local start-api"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "Jakie W. Rice",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "12.0.12",
+    "jest": "^25.2.7",
     "rimraf": "2.6.3",
     "serverless-offline": "^6.1.4",
     "serverless-plugin-typescript": "^1.1.9",
@@ -26,8 +27,12 @@
     "webpack-cli": "3.3.5"
   },
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
     "@types/aws-lambda": "8.10.27",
     "aws-lambda": "1.0.5",
+    "babel-jest": "^25.2.6",
     "fp-ts": "1.19.4"
   }
 }
