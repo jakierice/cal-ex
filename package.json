@@ -18,7 +18,7 @@
     "@types/node": "12.0.12",
     "jest": "^25.2.7",
     "rimraf": "2.6.3",
-    "serverless-offline": "^6.1.4",
+    "serverless-offline": "^12.0.3",
     "serverless-plugin-typescript": "^1.1.9",
     "ts-loader": "6.0.4",
     "tslint": "5.18.0",
